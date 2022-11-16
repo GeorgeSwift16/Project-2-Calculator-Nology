@@ -1,0 +1,25 @@
+@use "../Utilities/variables" as *;
+@use "../Utilities/mixins" as *;
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // section container for calc
+    .calculator {
+        background-color: $black;
+        padding: 0.5rem;
+        // calc container / grid 
+        .calculator__form {
+            width: 30vh;
+            height: 40vh;
+        }
+        // display screen
+        .calculator__output {
+            @include black-display;
+            @include display-output-font-styling;
+            text-align: right;
+            
+        }
+    }
+}

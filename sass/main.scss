@@ -1,3 +1,7 @@
-@use "\Utilities\_variables.scss" as *;
-@use "\Utilities\_mixins.scss" as *;
-@use "./base/reset";
+@use "../sass/Utilities/_variables" as *;
+@use "../sass/Utilities/_mixins" as *;
+@use "../sass/_base/reset" as *;
+@use "../sass/_layout/grid" as *;
+@use "../sass/pages/calculatorpage";
+@use "../sass/components/buttons" as *;
+

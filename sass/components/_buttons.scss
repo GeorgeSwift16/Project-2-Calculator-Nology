@@ -1,0 +1,25 @@
+@use "../Utilities/variables" as *;
+@use "../Utilities/mixins" as *;
+
+
+//button styling
+
+
+// overall styling for every button
+.calculator__button {
+    @include button-font-styling;
+    @include border-styling;
+}
+// button colour styling
+.button {
+    &--grey {
+    @include light-grey-buttons;
+    }
+    &--orange {
+    @include orange-buttons;
+    }
+    &--dark-grey {
+    @include dark-grey-buttons;
+    }
+}
+// button border styling

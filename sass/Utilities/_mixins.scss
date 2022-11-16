@@ -2,6 +2,14 @@
 // mixins to use
 
 
+// colour styling
+
+// output-display styling
+
+@mixin black-display {
+    background-color: $black;
+    color: $white;
+}
 
 // button-color-styling
 @mixin orange-buttons {
@@ -25,7 +33,15 @@
     font-size: $button-text-size;
     font-weight: $default-font-weight;
 }
-// button shape mixin - customise later
-@mixin button-shape {
-    border-radius: 50%;
+
+@mixin display-output-font-styling {
+    @include button-font-styling;
+    font-size: calc(1.5 * #{$button-text-size});
+    
 }
+// button shape mixin - customise later
+@mixin border-styling {
+    border-radius: 50%;
+    border: 2px solid $black;
+}
+// display out styling
