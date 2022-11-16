@@ -1,0 +1,31 @@
+@use "variables" as *;
+// mixins to use
+
+
+
+// button-color-styling
+@mixin orange-buttons {
+    background-color: $orange;
+    color: $white;
+    
+}
+
+@mixin dark-grey-buttons {
+    background-color: $dark-grey;
+    color: $white;
+}
+
+@mixin light-grey-buttons {
+    background-color: $light-grey;
+    color: $white;
+}
+//  button font styling
+@mixin button-font-styling {
+    font-family: $text-font-family;
+    font-size: $button-text-size;
+    font-weight: $default-font-weight;
+}
+// button shape mixin - customise later
+@mixin button-shape {
+    border-radius: 50%;
+}
