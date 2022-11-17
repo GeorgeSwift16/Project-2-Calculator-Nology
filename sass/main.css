@@ -96,6 +96,7 @@
 body {
   height: 100vh;
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -103,23 +104,19 @@ body .calculator {
   background-color: #1e1e1e;
   padding: 0.5rem;
 }
-body .calculator .calculator__form {
-  width: 30vh;
-  height: 40vh;
-}
 body .calculator .calculator__output {
   background-color: #1e1e1e;
   color: #ffffff;
   font-family: "Manrope", sans-serif;
-  font-size: 0.5rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  font-size: calc(1.5 * 0.5rem);
+  font-size: calc(1.5 * 1.5rem);
   text-align: right;
 }
 
 .calculator__button {
   font-family: "Manrope", sans-serif;
-  font-size: 0.5rem;
+  font-size: 1.5rem;
   font-weight: 400;
   border-radius: 50%;
   border: 2px solid #1e1e1e;

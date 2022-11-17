@@ -3,6 +3,7 @@
 body {
     height: 100vh;
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     // section container for calc
@@ -11,8 +12,6 @@ body {
         padding: 0.5rem;
         // calc container / grid 
         .calculator__form {
-            width: 30vh;
-            height: 40vh;
         }
         // display screen
         .calculator__output {
