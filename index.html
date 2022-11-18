@@ -11,11 +11,11 @@
     <!-- calculator section -->
     <section class="calculator">
         <!-- calculator block class=calculator__element -->
-        <form id="calculator" class="calculator__form">
+        <div id="calculator" class="calculator__form">
             <!-- calculator buttons, class=calculator__button-"button value displayed" type=button form=calculator onlick=myfunction -->
-            <output class="calculator__output" id="output-screen">screen</output>
+            <output class="calculator__output" id="output-screen" value="0"></output>
             <button class="calculator__button calculator__button-C calculator__button--grey" id="clear-button" name="button-C" type="button" form="calculator" value="C" >C</button>
-            <button class="calculator__button calculator__button-plusMinus calculator__button--grey" id="plusMinus-button" name="button-plusMinus" type="button" form="calculator" value="plusMinus" >+/-</button>
+            <button class="calculator__button calculator__button-plusMinus calculator__button--grey" id="plusMinus-button" name="button-plusMinus" type="button" form="calculator" value="negative" >+/-</button>
             <button class="calculator__button calculator__button-percent calculator__button--grey" id="percent-button" name="button-percent" type="button" form="calculator" value="%" >%</button>
             <button class="calculator__button calculator__button-divide calculator__button--orange" id="divide-button" name="button-divide" type="button" form="calculator" value="/" >➗</button>
             <button class="calculator__button calculator__button-7 calculator__button-numeric calculator__button--dark-grey" id="seven-button" name="button-7" type="button" form="calculator" value="7" id="button-7" >7</button>
@@ -33,7 +33,7 @@
             <button class="calculator__button calculator__button-0 calculator__button-numeric calculator__button--dark-grey" id="zero-button" name="button-0" type="button" form="calculator" value="0" >0</button>
             <button class="calculator__button calculator__button-decimalPlace calculator__button--dark-grey" id="decimalPlace-Button" name="button-decimalPlace" type="button" form="calculator" value=".">.</button>
             <button class="calculator__button calculator__button-equals calculator__button--orange" name="button-equals" id="equals-button" type="submit" form="calculator" value="=">=</button>
-        </form>
+        </div>
     </section>
     <script src="./script.js"></script>
 </body>
