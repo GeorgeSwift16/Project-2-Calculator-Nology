@@ -11,7 +11,7 @@
     @include border-styling;
 }
 // button colour styling
-.button {
+.calculator__button {
     &--grey {
     @include light-grey-buttons;
     }

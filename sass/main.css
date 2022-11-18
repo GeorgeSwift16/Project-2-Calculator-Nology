@@ -16,79 +16,79 @@
   grid-column: 1/5;
 }
 
-.button-c {
+.calculator__button-c {
   grid-row: 2/3;
   grid-column: 1/2;
 }
-.button-plusMinus {
+.calculator__button-plusMinus {
   grid-row: 2/3;
   grid-column: 2/3;
 }
-.button-percent {
+.calculator__button-percent {
   grid-row: 2/3;
   grid-column: 3/4;
 }
-.button-divide {
+.calculator__button-divide {
   grid-row: 2/3;
   grid-column: 4/5;
 }
-.button-7 {
+.calculator__button-7 {
   grid-row: 3/4;
   grid-column: 1/2;
 }
-.button-8 {
+.calculator__button-8 {
   grid-row: 3/4;
   grid-column: 2/3;
 }
-.button-9 {
+.calculator__button-9 {
   grid-row: 3/4;
   grid-column: 3/4;
 }
-.button-multiply {
+.calculator__button-multiply {
   grid-row: 3/4;
   grid-column: 4/5;
 }
-.button-4 {
+.calculator__button-4 {
   grid-row: 4/5;
   grid-column: 1/2;
 }
-.button-5 {
+.calculator__button-5 {
   grid-row: 4/5;
   grid-column: 2/3;
 }
-.button-6 {
+.calculator__button-6 {
   grid-row: 4/5;
   grid-column: 3/4;
 }
-.button-minus {
+.calculator__button-minus {
   grid-row: 4/5;
   grid-column: 4/5;
 }
-.button-1 {
+.calculator__button-1 {
   grid-row: 5/6;
   grid-column: 1/2;
 }
-.button-2 {
+.calculator__button-2 {
   grid-row: 5/6;
   grid-column: 2/3;
 }
-.button-3 {
+.calculator__button-3 {
   grid-row: 5/6;
   grid-column: 3/4;
 }
-.button-plus {
+.calculator__button-plus {
   grid-row: 5/6;
   grid-column: 4/5;
 }
-.button-0 {
+.calculator__button-0 {
   grid-row: 6/7;
   grid-column: 1/3;
 }
-.button-decimalPlace {
+.calculator__button-decimalPlace {
   grid-row: 6/7;
   grid-column: 3/4;
 }
-.button-equals {
+.calculator__button-equals {
   grid-row: 6/7;
   grid-column: 4/5;
 }
@@ -108,29 +108,29 @@ body .calculator .calculator__output {
   background-color: #1e1e1e;
   color: #ffffff;
   font-family: "Manrope", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
-  font-size: calc(1.5 * 1.5rem);
+  font-size: calc(1.5 * 2rem);
   text-align: right;
 }
 
 .calculator__button {
   font-family: "Manrope", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
   border-radius: 50%;
   border: 2px solid #1e1e1e;
 }
 
-.button--grey {
+.calculator__button--grey {
   background-color: #5f5d5d;
   color: #ffffff;
 }
-.button--orange {
+.calculator__button--orange {
   background-color: #f06423;
   color: #ffffff;
 }
-.button--dark-grey {
+.calculator__button--dark-grey {
   background-color: #252525;
   color: #ffffff;
 }/*# sourceMappingURL=main.css.map */
