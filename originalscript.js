@@ -35,7 +35,7 @@ const calculationAnswer = 2 + "b" + "c";
 // functions
 // output screen
 // functino to change the outputscreen display on click of button or clear
-const changeOutputScreenDisplay = (event) => {
+const changeOutputScreenDisplay(event){
   if (event.target.value === "C") {
     (outputScreen.innerText = "0");
     return
@@ -51,6 +51,10 @@ const changeOutputScreenDisplay = (event) => {
     outputScreen.innerText = outputScreen.innerText + `${event.target.value}`;
   }
 };
+
+let x = outputScreen.innerText;
+console.log(x);
+
 // delete form
 
 // event listeners
