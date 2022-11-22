@@ -23,115 +23,75 @@ const outputScreen = document.querySelector("#output-screen");
 
 let runningTotalNumber = 0;
 let currentOperand = "";
-let currentActiveNumber = "";
+let currentActiveNumberString = "";
 let calculationAnswer = 0;
-
+let currentActiveNumberNumber = 0;
 
 // functions 
-
 
 // function for numeric input
 
 const handleNumberInput = (event) => {
-currentActiveNumber += event.target.value;
-console.log(currentActiveNumber);
+    currentActiveNumberString += event.target.value;
 };
 
 // function for operand Input
 const handleOperandInput = (event) => {
-    if (currentOperand === true){
-        handleSecondOperand(event);
-        return
-    } else {
-        currentOperand = event.target.value;
+
+    if (currentOperand === true) {
+        handleSecondOperand();
+    } else if (event.target.value == "=") {
+        handleEqualsInput();
     }
-    console.log(currentOperand);
+    else {
+    return currentOperand = event.target.value;
+    }
+
 };
 
-// function to handle second operand input
-const handleSecondOperand = (event) => {
-let checkOperand = currentOperand;
-    switch (checkOperand) {
-        case ("+"):
-            runningTotalNumber += parseFloat(currentActiveNumber);
-            currentOperand = event.target.value;
-            currentActiveNumber = "";
-        case ("-"):
-            runningTotalNumber -= parseFloat(currentActiveNumber);
-            currentOperand = event.target.value;
-            currentActiveNumber = "";
-        case ("/"):
-            runningTotalNumber = (runningTotalNumber / (parseFloat(currentActiveNumber)));
-            currentOperand = event.target.value;
-            currentActiveNumber = "";
-        case ("*"):
-            runningTotalNumber = (runningTotalNumber * (parseFloat(currentActiveNumber)));
-            currentOperand = event.target.value;
-            currentActiveNumber = "";
-            
+// function to handle second operand input - parse float of current number input string, check the operand, run correct calc using the float number then reset the values and pass back to handleoperand input to assign the current operand to event.target.value.
+const handleSecondOperand = () => {
+    currentActiveNumberNumber = 0;
+    currentActiveNumberNumber += parseInt(currentActiveNumberString);
+    runningTotalNumber += currentActiveNumberNumber;
+    currentActiveNumberNumber = 0;
+    currentActiveNumberString = "";
+    let checkOperand = currentOperand;
+        if (checkOperand == "+") {
+            runningTotalNumber += currentActiveNumberNumber;
+            currentOperand = "";
+            handleOperandInput();
+        } else if (checkOperand == "-") {
+            runningTotalNumber -= currentActiveNumberNumber;
+            currentOperand = "";
+            handleOperandInput();
+        } else if (checkOperand = "/") {
+            runningTotalNumber = (runningTotalNumber / currentActiveNumberNumber);
+            currentOperand = "";
+            handleOperandInput();
+        } else {
+            runningTotalNumber = (runningTotalNumber * currentActiveNumberNumber);
+            currentOperand = "";
+            handleOperandInput();
+        }
+    
+};
 
+// Function to handle clear button input
 
+const handleClearButton = () => {
+    runningTotalNumber = 0;
+    currentOperand = "";
+    currentActiveNumberString = "";
+    calculationAnswer = 0;
+    currentActiveNumberNumber = 0;
+};
 
-
-
-
-
-
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const handleEqualsInput = () => {
+    handleSecondOperand();
+    calculationAnswer = runningTotalNumber;
+    runningTotalNumber = 0;
+};
 
 
 // function to handle outputscreen display
@@ -141,8 +101,7 @@ const changeOutputScreenDisplay = (event) => {
     return
     }
     if (event.target.value === "=") {
-    (outputScreen.innerText = `${calculationAnswer}`);
-    return
+    return outputScreen.innerText = calculationAnswer;
     }
     if (outputScreen.innerText === "0" || outputScreen.innerText == calculationAnswer) {
     outputScreen.innerText = `${event.target.value}`;
@@ -153,21 +112,7 @@ const changeOutputScreenDisplay = (event) => {
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// event listeners
 for (let index = 0; index < allCalculatorButtonsArr.length; index++) {
 allCalculatorButtonsArr[index].addEventListener("click", changeOutputScreenDisplay)};
 
@@ -179,4 +124,3 @@ equalsButtonInput.addEventListener("click", handleEqualsInput);
 
 clearButtonInput.addEventListener("click", handleClearButton);
 
-console.table(num)
