@@ -1,40 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sass/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sass/main.css" />
     <title>Project 2 Calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- calculator section -->
     <section class="calculator">
-        <!-- calculator block class=calculator__element -->
-        <div id="calculator" class="calculator__form">
-            <!-- calculator buttons, class=calculator__button-"button value displayed" type=button form=calculator onlick=myfunction -->
-            <output class="calculator__output" id="output-screen" value="0"></output>
-            <button class="calculator__button calculator__button-C calculator__button--grey" id="clear-button" name="button-C" type="button" form="calculator" value="C" >C</button>
-            <button class="calculator__button calculator__button-plusMinus calculator__button--grey" id="plusMinus-button" name="button-plusMinus" type="button" form="calculator" value="+/-" >+/-</button>
-            <button class="calculator__button calculator__button-percent calculator__button--grey calculator__button--operand" id="percent-button" name="button-percent" type="button" form="calculator" value="%" >%</button>
-            <button class="calculator__button calculator__button-divide calculator__button--orange calculator__button--operand" id="divide-button" name="button-divide" type="button" form="calculator" value="/" >➗</button>
-            <button class="calculator__button calculator__button-7 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric"  id="seven-button" name="button-7" type="button" form="calculator" value="7" id="button-7" >7</button>
-            <button class="calculator__button calculator__button-8 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric" id="eight-button" name="button-8" type="button" form="calculator" value="8" >8</button>
-            <button class="calculator__button calculator__button-9 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric" id="nine-button" name="button-9" type="button" form="calculator" value="9" >9</button>
-            <button class="calculator__button calculator__button-multiply calculator__button--orange calculator__button--operand" id="multiply-button" name="button-multiply" type="button" form="calculator" value="*" >✖️</button>
-            <button class="calculator__button calculator__button-4 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric" id="four-button" name="button-4" type="button" form="calculator" value="4" >4</button>
-            <button class="calculator__button calculator__button-5 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric" id="five-button" name="button-5" type="button" form="calculator" value="5" >5</button>
-            <button class="calculator__button calculator__button-6 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric" id="six-button"name="button-6" type="button" form="calculator" value="6" >6</button>
-            <button class="calculator__button calculator__button-minus calculator__button--orange calculator__button--operand" id="minus-button" name="button-minus" type="button" form="calculator" value="-" >➖</button>
-            <button class="calculator__button calculator__button-1 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric" id="one-button"name="button-1" type="button" form="calculator" value="1">1</button>
-            <button class="calculator__button calculator__button-2 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric" id="two-button" name="button-2" type="button" form="calculator" value="2">2</button>
-            <button class="calculator__button calculator__button-3 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric" id="three-button"   name="button-3" type="button" form="calculator" value="3">3</button>
-            <button class="calculator__button calculator__button-plus calculator__button--orange calculator__button--operand" id="plus-button" name="button-plus" type="button" form="calculator" value="+">➕</button>
-            <button class="calculator__button calculator__button-0 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric" id="zero-button" name="button-0" type="button" form="calculator" value="0" >0</button>
-            <button class="calculator__button calculator__button-decimalPlace calculator__button--dark-grey" id="decimalPlace-Button" name="button-decimalPlace" type="button" form="calculator" value=".">.</button>
-            <button class="calculator__button calculator__button-equals calculator__button--orange" name="button-equals" id="equals-button" type="submit" form="calculator" value="=">=</button>
-        </div>
+      <!-- calculator block class=calculator__element -->
+      <div id="calculator" class="calculator__form">
+        <!-- calculator buttons, class=calculator__button-"button value displayed" type=button form=calculator onlick=myfunction -->
+        <output
+          class="calculator__output"
+          id="output-screen"
+          value="0"></output>
+        <button
+          class="calculator__button calculator__button-C calculator__button--grey"
+          id="clear-button"
+          name="button-C"
+          type="button"
+          form="calculator"
+          value="C">
+          C
+        </button>
+        <button
+          class="calculator__button calculator__button-plusMinus calculator__button--grey"
+          id="plusMinus-button"
+          name="button-plusMinus"
+          type="button"
+          form="calculator"
+          value="+/-">
+          +/-
+        </button>
+        <button
+          class="calculator__button calculator__button-percent calculator__button--grey calculator__button--operand"
+          id="percent-button"
+          name="button-percent"
+          type="button"
+          form="calculator"
+          value="%">
+          %
+        </button>
+        <button
+          class="calculator__button calculator__button-divide calculator__button--orange calculator__button--operand"
+          id="divide-button"
+          name="button-divide"
+          type="button"
+          form="calculator"
+          value="/">
+          ➗
+        </button>
+        <button
+          class="calculator__button calculator__button-7 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric"
+          id="seven-button"
+          name="button-7"
+          type="button"
+          form="calculator"
+          value="7"
+          id="button-7">
+          7
+        </button>
+        <button
+          class="calculator__button calculator__button-8 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric"
+          id="eight-button"
+          name="button-8"
+          type="button"
+          form="calculator"
+          value="8">
+          8
+        </button>
+        <button
+          class="calculator__button calculator__button-9 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric"
+          id="nine-button"
+          name="button-9"
+          type="button"
+          form="calculator"
+          value="9">
+          9
+        </button>
+        <button
+          class="calculator__button calculator__button-multiply calculator__button--orange calculator__button--operand"
+          id="multiply-button"
+          name="button-multiply"
+          type="button"
+          form="calculator"
+          value="*">
+          ✖️
+        </button>
+        <button
+          class="calculator__button calculator__button-4 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric"
+          id="four-button"
+          name="button-4"
+          type="button"
+          form="calculator"
+          value="4">
+          4
+        </button>
+        <button
+          class="calculator__button calculator__button-5 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric"
+          id="five-button"
+          name="button-5"
+          type="button"
+          form="calculator"
+          value="5">
+          5
+        </button>
+        <button
+          class="calculator__button calculator__button-6 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric"
+          id="six-button"
+          name="button-6"
+          type="button"
+          form="calculator"
+          value="6">
+          6
+        </button>
+        <button
+          class="calculator__button calculator__button-minus calculator__button--orange calculator__button--operand"
+          id="minus-button"
+          name="button-minus"
+          type="button"
+          form="calculator"
+          value="-">
+          ➖
+        </button>
+        <button
+          class="calculator__button calculator__button-1 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric"
+          id="one-button"
+          name="button-1"
+          type="button"
+          form="calculator"
+          value="1">
+          1
+        </button>
+        <button
+          class="calculator__button calculator__button-2 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric"
+          id="two-button"
+          name="button-2"
+          type="button"
+          form="calculator"
+          value="2">
+          2
+        </button>
+        <button
+          class="calculator__button calculator__button-3 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric"
+          id="three-button"
+          name="button-3"
+          type="button"
+          form="calculator"
+          value="3">
+          3
+        </button>
+        <button
+          class="calculator__button calculator__button-plus calculator__button--orange calculator__button--operand"
+          id="plus-button"
+          name="button-plus"
+          type="button"
+          form="calculator"
+          value="+">
+          ➕
+        </button>
+        <button
+          class="calculator__button calculator__button-0 calculator__button-numeric calculator__button--dark-grey calculator__button--numeric"
+          id="zero-button"
+          name="button-0"
+          type="button"
+          form="calculator"
+          value="0">
+          0
+        </button>
+        <button
+          class="calculator__button calculator__button-decimalPlace calculator__button--dark-grey .calculator__button--numeric"
+          id="decimalPlace-Button"
+          name="button-decimalPlace"
+          type="button"
+          form="calculator"
+          value=".">
+          .
+        </button>
+        <button
+          class="calculator__button calculator__button-equals calculator__button--orange"
+          name="button-equals"
+          id="equals-button"
+          type="submit"
+          form="calculator"
+          value="=">
+          =
+        </button>
+      </div>
     </section>
-    <script src="./newscript.js"></script>
-</body>
+    <script src="./finaldayscript.js"></script>
+  </body>
 </html>
